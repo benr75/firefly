@@ -29,6 +29,7 @@ module Firefly
     private
       # Normalize the URL
       def self.normalize_url(url)
+        url = url.gsub(" ", "%20")
         URI.parse(url).normalize.to_s
       end
       
